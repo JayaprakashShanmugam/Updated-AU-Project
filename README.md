@@ -1,6 +1,7 @@
 # Updated-AU-Project
 An Improved version of Opportunity Management.
-Befor starting kindly see the base version ReadMe of AU-project in https://github.com/JayaprakashShanmugam/AU-project
+
+Before starting kindly see the base version ReadMe of AU-project in https://github.com/JayaprakashShanmugam/AU-project
 
 # Updated Trends Chart
 Bar chart for Location,Skills,Description,Experience.

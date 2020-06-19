@@ -1,0 +1,65 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+       <span><a href="/home"> <img src="assets/img/accolite-logo.jpg" alt="AU-logo" width="180" height="70"></a></span>
+       <span class="spacer"></span>
+       <a  mat-button color="primary" routerLink="/trendschart">Trends</a>
+          <a  mat-button color="primary" routerLink="/viewtrends">Opportunity</a>
+          <a  mat-button color="primary" routerLink="/home">Logout</a>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <mat-toolbar>
+    Trends&nbsp;&nbsp;&nbsp; 
+  </mat-toolbar>
+  <mat-card>
+    <div>
+      <mat-toolbar>
+        Trends on Location&nbsp;&nbsp;&nbsp; 
+      </mat-toolbar>
+        <div style="display: block">
+          <canvas baseChart
+                  [datasets]="barChartDataLocation"
+                  [labels]="barChartLabelLocation"
+                  [options]="barChartOptions"
+                  [legend]="barChartLegend"
+                  [chartType]="barChartType">
+          </canvas>
+        </div>
+        <mat-toolbar>
+          Trends on Skills&nbsp;&nbsp;&nbsp; 
+        </mat-toolbar>
+        <div style="display: block">
+          <canvas baseChart
+                  [datasets]="barChartDataSkills"
+                  [labels]="barChartLabelSkills"
+                  [options]="barChartOptions"
+                  [legend]="barChartLegend"
+                  [chartType]="barChartType">
+          </canvas>
+        </div>
+        <mat-toolbar>
+          Trends on Description&nbsp;&nbsp;&nbsp; 
+        </mat-toolbar>
+        <div style="display: block">
+          <canvas baseChart
+                  [datasets]="barChartDataDescription"
+                  [labels]="barChartLabelDescription"
+                  [options]="barChartOptions"
+                  [legend]="barChartLegend"
+                  [chartType]="barChartType">
+          </canvas>
+        </div>
+        <mat-toolbar>
+          Trends on Experience&nbsp;&nbsp;&nbsp; 
+        </mat-toolbar>
+        <div style="display: block">
+          <canvas baseChart
+                  [datasets]="barChartDataExperience"
+                  [labels]="barChartLabelExperience"
+                  [options]="barChartOptions"
+                  [legend]="barChartLegend"
+                  [chartType]="barChartType">
+          </canvas>
+        </div>
+      </div>
+  </mat-card>
+

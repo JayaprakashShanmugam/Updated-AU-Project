@@ -1,0 +1,44 @@
+
+  
+  input[type=text], input[type=email],input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  input[type=text]:focus, input[type=email]:focus,input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  .spacer {
+    flex: 1 1 auto;
+  }
+  .main-div{
+   
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .bgdiv{
+    background-image: url('https://i.ytimg.com/vi/L9dVB_cp79U/maxresdefault.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  
+  }
+  .mat-toolbar.mat-primary {
+    background: #95ddbc;
+
+  }
+ 
+  
+
+  
+  
+  
+  

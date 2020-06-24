@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { OpportunityserviceService } from '../opportunityservice.service';
-import { Opportunity } from '../opportunity';
+import { Color } from 'ng2-charts';
 
 @Component({
   selector: 'app-trendschart',
@@ -17,7 +17,10 @@ export class TrendschartComponent implements OnInit {
     responsive: true
   };
 
-  public barChartType = 'bar';
+  public barChartTypeLocation = 'bar';
+  public barChartTypeSkills = 'line';
+  public barChartTypeDescription = 'doughnut';
+  public barChartTypeExperience = 'bar';
   public barChartLegend = true;
   public barChartLabelLocation:any[] = [];
   public locationData:any[] = [];
@@ -39,6 +42,34 @@ export class TrendschartComponent implements OnInit {
   public barChartDataExperience:any =[{
     data:[]
   }]
+  public barChartColorsLocation: Color[] = [
+    { backgroundColor: 'skyblue' },
+  ]
+  public barChartColorsSkills: Color[] = [
+    { backgroundColor: 'rgba(225,10,24,0.2)',
+    borderColor: 'violet',
+    pointBackgroundColor: 'rgba(225,10,24,0.2)',
+    pointBorderColor: '#fff',
+    pointHoverBackgroundColor: '#fff',
+    pointHoverBorderColor: 'rgba(225,10,24,0.2)' },
+  ]
+  public barChartColorsDescription: Color[] = [
+    { backgroundColor: [
+      'rgba(110, 114, 20, 1)',
+       'rgba(118, 183, 172, 1)',
+       'rgba(0, 148, 97, 1)',
+       'rgba(129, 78, 40, 1)',
+       'rgba(129, 199, 111, 1)',
+       'rgba(200, 109, 140, 1)',
+       'rgba(118, 113, 172, 1)',
+       'rgba(123, 148, 97, 0)',
+       'rgba(120, 240, 400, 0)',
+       'rgba(129, 199, 11, 0)'
+       ] }
+  ]
+  public barChartColorsExperience: Color[] = [
+    { backgroundColor: 'orange' },
+  ]
  
   ngOnInit(): void {
     this.service.locationcounter().subscribe((dataitemslocation:any[])=>{
